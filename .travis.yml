@@ -2,4 +2,4 @@ language: php
 
 before_script: composer install
 
-script: phpunit .
+script: phpunit -c phpunit.xml.dist
