@@ -1,0 +1,11 @@
+Cloning into '/tmp/CommitReplicatorBuild'...
+github
+origin
+A	foo.txt
+A	foo.txt
+# On branch newBranch
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   foo.txt
+#

@@ -2,6 +2,8 @@
 
 namespace CommitReplicator;
 
+use GitWrapper\GitWrapper;
+
 /**
  * @since 0.1
  *
@@ -13,6 +15,43 @@ namespace CommitReplicator;
  */
 class CommitReplicator {
 
+	protected $reporter;
 
+	public function __construct( MessageReporter $reporter ) {
+		$this->reporter = $reporter;
+	}
+
+	public function run() {
+		$commitHashes = $this->getNewCommits();
+
+		if ( !empty( $commitHashes ) ) {
+			$this->replicateLatestMaster();
+
+			foreach ( $commitHashes as $commitHash ) {
+				$this->replicateCommit( $commitHash );
+			}
+		}
+	}
+
+	protected function getNewCommits() {
+		return array(); // TODO
+	}
+
+	public function replicateLatestMaster() {
+
+	}
+
+	protected function fetchCommit( $commitHash ) {
+
+	}
+
+	protected function replicateCommit( $commitHash ) {
+
+	}
+
+
+	protected function report( $message ) {
+		$this->reporter->reportMessage( $message );
+	}
 
 }
