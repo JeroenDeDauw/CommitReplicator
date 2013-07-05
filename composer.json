@@ -12,9 +12,9 @@
 			 "role": "Developer"
 		 }
 	],
-	"replace": [
-		"jeroen-de-dauw/github-replicator"
-	],
+	"replace": {
+		"jeroen-de-dauw/github-replicator": "*"
+	},
 	"require": {
 		"php": ">=5.3.0",
 		"cpliakas/git-wrapper": "*",
