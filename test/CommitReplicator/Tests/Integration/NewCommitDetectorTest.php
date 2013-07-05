@@ -2,6 +2,9 @@
 
 namespace CommitReplicator\Tests\Integration;
 
+use CommitReplicator\Gerrit\Api\GerritChangesApi;
+use FileFetcher\SimpleFileFetcher;
+
 /**
  * @file
  * @ingroup CommitReplicator
@@ -19,48 +22,21 @@ class NewCommitDetectorTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	protected function getRecentCommits() {
-		die($this->httpGet($this->buildUrl(
-			'https://gerrit.wikimedia.org/r/changes/',
-			array(
-				'q' => 'status:open+project:mediawiki/extensions/Ask+-age:3w',
-				'n' => 2,
-				'o' => 'CURRENT_REVISION'
-			)
-		)));
-	}
+		$api = new GerritChangesApi( 'https://gerrit.wikimedia.org', new SimpleFileFetcher() );
 
-	protected function buildUrl( $urlBase, array $arguments ) {
-		if ( $arguments === array() ) {
-			return $urlBase;
-		}
+//		die($api->query(
+//			array(
+//				'status' => 'open',
+//				'project' => 'mediawiki/extensions/Ask',
+//				'-age' => '3w',
+//			),
+//			array(
+//				GerritChangesApi::LIMIT_ARGUMENT => 2,
+//				GerritChangesApi::OPTIONS_ARGUMENT => 'CURRENT_REVISION'
+//			)
+//		));
 
-		return $urlBase . '?' . $this->implodeArguments( $arguments, '=', '&' );
-	}
-
-	protected function implodeArguments( array $arguments, $assignmentOperator, $argumentSeparator ) {
-		$assignments = array();
-
-		foreach ( $arguments as $key => $value ) {
-			$assignments[] = $key . $assignmentOperator . $value;
-		}
-
-		return implode( $argumentSeparator, $assignments );
-	}
-
-
-
-}
-
-class GerritChangesApi {
-
-	public function __construct() {
 
 	}
-
-}
-
-interface FileFetcher {
-
-
 
 }

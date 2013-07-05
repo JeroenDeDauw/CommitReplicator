@@ -17,10 +17,9 @@
 	},
 	"require": {
 		"php": ">=5.3.0",
-		"cpliakas/git-wrapper": "*",
-		"jeroen-de-dauw/file-fetcher": "1.*"
+		"cpliakas/git-wrapper": "1.0.*@RC",
+		"jeroen-de-dauw/file-fetcher": "~1.0.1"
 	},
-	"minimum-stability" : "dev",
 	"autoload": {
 		"psr-0": {
 			"CommitReplicator": "src/"
