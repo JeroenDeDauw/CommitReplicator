@@ -1,0 +1,23 @@
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="Tests/bootstrap.php"
+         cacheTokens="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         stopOnError="false"
+         stopOnFailure="false"
+         stopOnIncomplete="false"
+         stopOnSkipped="false"
+         strict="true"
+         verbose="true">
+    <testsuites>
+        <testsuite name="CommitReplicator">
+            <directory>Tests/Unit</directory>
+        </testsuite>
+        <testsuite name="CommitReplicatorIntegration">
+            <directory>Tests/Integration</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
