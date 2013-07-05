@@ -1,5 +1,5 @@
 {
-	"name": "jeroen-de-dauw/github-replicator",
+	"name": "jeroen-de-dauw/commit-replicator",
 	"description": "Gerrit to GitHub replicator",
 	"keywords": ["gerrit", "github", "git", "commit", "replication", "replicator"],
 	"homepage": "https://github.com/JeroenDeDauw/CommitReplicator",
@@ -14,7 +14,8 @@
 	],
 	"require": {
 		"php": ">=5.3.0",
-		"cpliakas/git-wrapper": "*"
+		"cpliakas/git-wrapper": "*",
+		"jeroen-de-dauw/file-fetcher": "1.*",
 	},
 	"minimum-stability" : "dev",
 	"autoload": {
