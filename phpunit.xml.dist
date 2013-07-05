@@ -1,6 +1,6 @@
 <phpunit backupGlobals="false"
          backupStaticAttributes="false"
-         bootstrap="Tests/bootstrap.php"
+         bootstrap="test/bootstrap.php"
          cacheTokens="false"
          colors="true"
          convertErrorsToExceptions="true"
@@ -14,10 +14,10 @@
          verbose="true">
     <testsuites>
         <testsuite name="CommitReplicator">
-            <directory>Tests/Unit</directory>
+            <directory>test/CommitReplicator/Tests/Unit</directory>
         </testsuite>
         <testsuite name="CommitReplicatorIntegration">
-            <directory>Tests/Integration</directory>
+            <directory>test/CommitReplicator/Tests/Integration</directory>
         </testsuite>
     </testsuites>
 </phpunit>
