@@ -2,7 +2,7 @@
 
 namespace CommitReplicator\Tests\Unit;
 
-use CommitReplicator\Commit;
+use CommitReplicator\Gerrit\Commit;
 
 /**
  * @covers CommitReplicator\Commit

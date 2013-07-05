@@ -3,7 +3,7 @@
 namespace CommitReplicator\Tests\Integration;
 
 use CommitReplicator\CommitReplicator;
-use CommitReplicator\EchoReporter;
+use CommitReplicator\Reporter\EchoReporter;
 
 /**
  * @covers CommitReplicator\CommitReplicator

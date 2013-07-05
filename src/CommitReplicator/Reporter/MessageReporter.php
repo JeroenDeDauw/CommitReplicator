@@ -1,6 +1,6 @@
 <?php
 
-namespace CommitReplicator;
+namespace CommitReplicator\Reporter;
 
 /**
  * @since 0.1

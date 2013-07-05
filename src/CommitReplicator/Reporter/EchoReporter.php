@@ -1,6 +1,6 @@
 <?php
 
-namespace CommitReplicator;
+namespace CommitReplicator\Reporter;
 
 /**
  * @since 0.1
@@ -11,8 +11,10 @@ namespace CommitReplicator;
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class Commit {
+class EchoReporter implements MessageReporter {
 
-
+	public function reportMessage( $message ) {
+		echo $message;
+	}
 
 }

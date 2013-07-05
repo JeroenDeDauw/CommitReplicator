@@ -1,6 +1,6 @@
 <?php
 
-namespace CommitReplicator;
+namespace CommitReplicator\Gerrit;
 
 /**
  * @since 0.1
@@ -11,10 +11,12 @@ namespace CommitReplicator;
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class EchoReporter implements MessageReporter {
+class Patchset {
 
-	public function reportMessage( $message ) {
-		echo $message;
-	}
+	protected $hash;
+	protected $number;
+	protected $refBranch;
+	protected $httpFetchUrl;
 
 }
+

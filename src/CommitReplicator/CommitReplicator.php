@@ -2,6 +2,7 @@
 
 namespace CommitReplicator;
 
+use CommitReplicator\Reporter\MessageReporter;
 use GitWrapper\GitWrapper;
 
 /**
